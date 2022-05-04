@@ -1,11 +1,4 @@
 /**
- * Этот скрипт выводит имена package'эй, которые совпадают с теми, что указаны на сайте
- * https://docs.google.com/spreadsheets/d/1H3xPB4PgWeFcHjZ7NOPtrcya_Ua4jUolWm-7z9-jSpQ/htmlview#.
- *
- * Выполнять скрипт следует в консоли браузера.
- * */
-
-/**
  * Формируем массив package'эй из package-lock.json.
  * */
     // В packagesObj вставляем всё из package-lock.json
