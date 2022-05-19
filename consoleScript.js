@@ -32,7 +32,15 @@ const uniqueArr = arrayUnique(cleanPackages);
 /**
  * Поиск совпадений с текстом на сайте
  * */
-const elems = document.querySelectorAll('td.s1');
-const bigInnerTextFromElems = [...elems].reduce((acc, elem) => `${acc}, ${elem.innerText}`, '');
+const elems = [...document.querySelectorAll('td')];
 
-uniqueArr.forEach(str => bigInnerTextFromElems.match(new RegExp('\\b' + str + '\\b')) ? console.log(str) : null);
+const resultArr = uniqueArr.filter(str =>
+    elems.find(el =>
+        el.textContent === str
+    )
+);
+
+const resultString = resultArr.join(', ');
+
+console.log(resultString);
+
